@@ -41,7 +41,7 @@ public class CustomCheck extends IssuableSubscriptionVisitor {
             Type returnType = symbol.returnType().type();
             Type inputType = symbol.parameterTypes().get(0);
             if( returnType.is(inputType.fullyQualifiedName()) ) {
-                /* Use the reportIssue to  */
+                /* Use the reportIssue to report any violations  */
                 reportIssue(methodTree.simpleName(), "Never do that");
             }
         }
