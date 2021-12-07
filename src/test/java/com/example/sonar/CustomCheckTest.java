@@ -2,7 +2,7 @@ package com.example.sonar;
 
 import com.example.sonar.check.CustomCheck;
 import org.junit.jupiter.api.Test;
-import org.sonar.java.checks.verifier.JavaCheckVerifier;
+import org.sonar.java.checks.verifier.CheckVerifier;
 
 class MyClass {
     MyClass(MyClass mc) { }
@@ -19,7 +19,7 @@ class MyClass {
 class CustomCheckTest {
     @Test
     void test() {
-        JavaCheckVerifier.newVerifier()
+        CheckVerifier.newVerifier()
                 .onFile("src/test/java/com/example/sonar/CustomCheckTest.java")
                 .withCheck(new CustomCheck())
                 .verifyIssues();

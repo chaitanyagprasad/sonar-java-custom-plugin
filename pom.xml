@@ -10,53 +10,56 @@
     <packaging>sonar-plugin</packaging>
 
     <properties>
-        <sonarqube.version>8.9.0.43852</sonarqube.version>
-        <sonarjava.version>6.15.1.26025</sonarjava.version>
+        <sonarqube.version>9.2.1.49989</sonarqube.version>
+        <sonarjava.version>7.6.0.28201</sonarjava.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <sonar.plugin.api.version>7.9</sonar.plugin.api.version>
-        <java.plugin.version>6.13.0.25138</java.plugin.version>
-        <!-- [...] -->
+        <sonar.plugin.api.version>9.2.1.49989</sonar.plugin.api.version>
+        <java.plugin.version>7.6.0.28201</java.plugin.version>
     </properties>
 
 
     <dependencies>
+        <!-- sonar plugin api -->
         <dependency>
             <groupId>org.sonarsource.sonarqube</groupId>
             <artifactId>sonar-plugin-api</artifactId>
-            <!-- minimal version of SonarQube to support. -->
-            <version>6.7</version>
-            <!-- mandatory scope -->
-            <scope>provided</scope>
+            <version>9.2.1.49989</version>
         </dependency>
+        <!-- junit -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
+        <!-- sonar-java-plugin -->
         <dependency>
             <groupId>org.sonarsource.java</groupId>
             <artifactId>sonar-java-plugin</artifactId>
-            <version>6.14.0.25463</version>
+            <version>7.6.0.28201</version>
             <scope>provided</scope>
         </dependency>
+        <!-- java checks testkit -->
         <dependency>
             <groupId>org.sonarsource.java</groupId>
             <artifactId>java-checks-testkit</artifactId>
-            <version>6.14.0.25463</version>
+            <version>7.6.0.28201</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.8.1</version>
         </dependency>
+        <!-- sonar java frontend -->
         <dependency>
             <groupId>org.sonarsource.java</groupId>
             <artifactId>java-frontend</artifactId>
-            <version>6.14.0.25463</version>
+            <version>7.6.0.28201</version>
         </dependency>
+
     </dependencies>
 
     <build>
